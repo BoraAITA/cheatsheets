@@ -1,54 +1,54 @@
 # 🐧 Linux Cheatsheet
 
-## Dosya İşlemleri
+## File Operations
 
 ```bash
-ls -la                      # Detaylı listeleme
-cd <dizin>                  # Dizin değiştir
-mkdir <dizin>               # Dizin oluştur
-rm -rf <dizin>              # Dizin ve içeriğini sil
-cp -r <kaynak> <hedef>      # Kopyala
-mv <kaynak> <hedef>         # Taşı veya yeniden adlandır
-find . -name "*.txt"        # Dosya bul
+ls -la                      # Detailed listing
+cd <directory>              # Change directory
+mkdir <directory>           # Create directory
+rm -rf <directory>          # Remove directory and contents
+cp -r <source> <dest>       # Copy recursively
+mv <source> <dest>          # Move or rename
+find . -name "*.txt"        # Find files
 ```
 
-## Dosya Okuma/Yazma
+## File Reading/Writing
 
 ```bash
-cat <dosya>                 # Dosyayı göster
-less <dosya>                # Sayfalı göster
-head -n 20 <dosya>          # İlk 20 satırı göster
-tail -f <log-dosyasi>       # Canlı log takip
-grep "arama" <dosya>        # Dosyada ara
+cat <file>                  # Display file content
+less <file>                 # Paginated display
+head -n 20 <file>           # Show first 20 lines
+tail -f <log-file>          # Follow log file
+grep "search" <file>        # Search in file
 ```
 
-## Sistem
+## System
 
 ```bash
-top                         # Süreçleri göster
-htop                        # Gelişmiş süreç gösterici
-df -h                       # Disk kullanımı
-free -h                     # Bellek kullanımı
-uname -a                    # Sistem bilgisi
-uptime                      # Çalışma süresi
+top                         # Show processes
+htop                        # Advanced process viewer
+df -h                       # Disk usage
+free -h                     # Memory usage
+uname -a                    # System info
+uptime                      # Uptime
 ```
 
-## Ağ
+## Network
 
 ```bash
-ping <host>                 # Ağ bağlantısı test
-curl <url>                  # HTTP isteği
-wget <url>                  # Dosya indir
-netstat -tuln               # Açık portları göster
-ss -tuln                    # Modern port görüntüleme
+ping <host>                 # Test connectivity
+curl <url>                  # HTTP request
+wget <url>                  # Download file
+netstat -tuln               # Show open ports
+ss -tuln                    # Modern port display
 ```
 
-## İpuçları
+## Tips
 
 ```bash
-history | grep "komut"      # Komut geçmişinde ara
-!!                          # Son komutu tekrar çalıştır
-sudo !!                     # Son komutu sudo ile çalıştır
-alias ll="ls -la"           # Kısayol oluştur
-chmod +x <dosya>            # Çalıştırma izni ver
+history | grep "command"    # Search command history
+!!                          # Repeat last command
+sudo !!                     # Repeat last command with sudo
+alias ll="ls -la"           # Create shortcut
+chmod +x <file>             # Make executable
 ```

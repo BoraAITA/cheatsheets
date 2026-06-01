@@ -1,124 +1,124 @@
 # 🐍 Python Cheatsheet
 
-## Temel Syntax
+## Basic Syntax
 
 ```python
-# Değişkenler
-isim = "Ali"                 # String
-yas = 25                     # Integer
-boy = 1.75                   # Float
-aktif = True                 # Boolean
-liste = [1, 2, 3]            # List
-sozluk = {"anahtar": "değer"}  # Dict
-kume = {1, 2, 3}             # Set
+# Variables
+name = "Ali"                # String
+age = 25                    # Integer
+height = 1.75               # Float
+active = True               # Boolean
+lst = [1, 2, 3]             # List
+dict = {"key": "value"}     # Dict
+s = {1, 2, 3}               # Set
 ```
 
-## Kontrol Yapıları
+## Control Structures
 
 ```python
 # If/Else
-if kosul:
+if condition:
     pass
-elif baska_kosul:
+elif another_condition:
     pass
 else:
     pass
 
-# For döngüsü
+# For loop
 for i in range(10):
     print(i)
 
 # While
-while kosul:
+while condition:
     break
 ```
 
-## Fonksiyonlar
+## Functions
 
 ```python
-# Normal fonksiyon
-def merhaba(isim):
-    return f"Merhaba {isim}!"
+# Regular function
+def hello(name):
+    return f"Hello {name}!"
 
 # Lambda
-topla = lambda x, y: x + y
+add = lambda x, y: x + y
 
 # Default parameter
-def selamla(isim="Dünya"):
-    return f"Selam {isim}!"
+def greet(name="World"):
+    return f"Hello {name}!"
 
-# *args ve **kwargs
-def fonksiyon(*args, **kwargs):
+# *args and **kwargs
+def func(*args, **kwargs):
     pass
 ```
 
 ## List Comprehension
 
 ```python
-# Temel
-kareler = [x**2 for x in range(10)]
+# Basic
+squares = [x**2 for x in range(10)]
 
-# Koşullu
-ciftler = [x for x in range(20) if x % 2 == 0]
+# Conditional
+evens = [x for x in range(20) if x % 2 == 0]
 
-# İç içe
+# Nested
 matrix = [[j for j in range(3)] for i in range(3)]
 ```
 
-## Dosya İşlemleri
+## File Operations
 
 ```python
-# Okuma
-with open("dosya.txt", "r") as f:
-    icerik = f.read()
+# Reading
+with open("file.txt", "r") as f:
+    content = f.read()
 
-# Yazma
-with open("dosya.txt", "w") as f:
-    f.write("Merhaba Dunya!")
+# Writing
+with open("file.txt", "w") as f:
+    f.write("Hello World!")
 
-# Satır satır okuma
-with open("dosya.txt") as f:
-    for satir in f:
-        print(satir.strip())
+# Line by line
+with open("file.txt") as f:
+    for line in f:
+        print(line.strip())
 ```
 
-## Hata Yönetimi
+## Error Handling
 
 ```python
 try:
-    sonuc = 10 / 0
+    result = 10 / 0
 except ZeroDivisionError as e:
-    print(f"Hata: {e}")
+    print(f"Error: {e}")
 except Exception as e:
-    print(f"Beklenmeyen hata: {e}")
+    print(f"Unexpected error: {e}")
 finally:
-    print("Her durumda çalışır")
+    print("Always runs")
 ```
 
 ## Class
 
 ```python
-class Kiisi:
-    def __init__(self, isim, yas):
-        self.isim = isim
-        self.yas = yas
+class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
     
-    def tanit(self):
-        return f"Ben {self.isim}, {self.yas} yaşındayım."
+    def introduce(self):
+        return f"I'm {self.name}, {self.age} years old."
 ```
 
-## İpuçları
+## Tips
 
 ```python
 # f-string (Python 3.6+)
-isim = "Ali"
-yas = 25
-print(f"Merhaba {isim}, {yas} yaşındasın.")
+name = "Ali"
+age = 25
+print(f"Hello {name}, you are {age} years old.")
 
 # Walrus operator (Python 3.8+)
-if (n := len("merhaba")) > 5:
-    print(f"Uzunluk: {n}")
+if (n := len("hello")) > 5:
+    print(f"Length: {n}")
 
 # Unpacking
-a, b, *geri = [1, 2, 3, 4, 5]
+a, b, *rest = [1, 2, 3, 4, 5]
 ```

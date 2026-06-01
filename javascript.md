@@ -1,62 +1,62 @@
 # 🟨 JavaScript Cheatsheet (ES6+)
 
-## Değişkenler
+## Variables
 
 ```javascript
-const sabit = 10;           // Sabit değer
-let degisen = 20;           // Değişken değer
-// var eskiYontem = 30;     // Kullanmayın!
+const constant = 10;        // Constant value
+let variable = 20;          // Mutable value
+// var oldWay = 30;         // Don't use!
 ```
 
-## Fonksiyonlar
+## Functions
 
 ```javascript
 // Arrow function
-const merhaba = (isim) => `Merhaba ${isim}!`;
+const hello = (name) => `Hello ${name}!`;
 
 // Default parameter
-const selamla = (isim = "Dünya") => `Selam ${isim}!`;
+const greet = (name = "World") => `Hello ${name}!`;
 
 // Rest parameter
-const topla = (...sayilar) => sayilar.reduce((a, b) => a + b, 0);
+const sum = (...numbers) => numbers.reduce((a, b) => a + b, 0);
 ```
 
 ## Destructuring
 
 ```javascript
 // Array
-const [bir, iki] = [1, 2, 3];
+const [first, second] = [1, 2, 3];
 
 // Object
-const { ad, yas } = { ad: "Ali", yas: 25, sehir: "İstanbul" };
+const { name, age } = { name: "Ali", age: 25, city: "Istanbul" };
 
 // Nested
-const { adres: { sehir } } = { adres: { sehir: "Ankara" } };
+const { address: { city } } = { address: { city: "Ankara" } };
 ```
 
 ## Array Methods
 
 ```javascript
-const sayilar = [1, 2, 3, 4, 5];
+const numbers = [1, 2, 3, 4, 5];
 
-sayilar.map(x => x * 2);        // [2, 4, 6, 8, 10]
-sayilar.filter(x => x > 3);     // [4, 5]
-sayilar.reduce((a, b) => a + b); // 15
-sayilar.find(x => x > 3);       // 4
-sayilar.some(x => x > 3);       // true
-sayilar.every(x => x > 0);      // true
+numbers.map(x => x * 2);        // [2, 4, 6, 8, 10]
+numbers.filter(x => x > 3);     // [4, 5]
+numbers.reduce((a, b) => a + b); // 15
+numbers.find(x => x > 3);       // 4
+numbers.some(x => x > 3);       // true
+numbers.every(x => x > 0);      // true
 ```
 
 ## Async/Await
 
 ```javascript
-const veriGetir = async () => {
+const fetchData = async () => {
   try {
-    const cevap = await fetch("https://api.example.com/data");
-    const veri = await cevap.json();
-    return veri;
-  } catch (hata) {
-    console.error("Hata:", hata);
+    const response = await fetch("https://api.example.com/data");
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error:", error);
   }
 };
 ```
@@ -65,9 +65,9 @@ const veriGetir = async () => {
 
 ```javascript
 // Spread
-const dizi1 = [1, 2, 3];
-const dizi2 = [...dizi1, 4, 5]; // [1, 2, 3, 4, 5]
+const arr1 = [1, 2, 3];
+const arr2 = [...arr1, 4, 5]; // [1, 2, 3, 4, 5]
 
-const obje1 = { a: 1, b: 2 };
-const obje2 = { ...obje1, c: 3 }; // { a: 1, b: 2, c: 3 }
+const obj1 = { a: 1, b: 2 };
+const obj2 = { ...obj1, c: 3 }; // { a: 1, b: 2, c: 3 }
 ```

@@ -1,49 +1,49 @@
 # 🔄 Git Cheatsheet
 
-## Temel Komutlar
+## Basic Commands
 
 ```bash
-git init                    # Yeni repo başlat
-git clone <url>             # Repo kopyala
-git status                  # Durum göster
-git add .                   # Tüm değişiklikleri ekle
-git commit -m "mesaj"       # Commit et
-git push                    # Uzak sunucuya gönder
-git pull                    # Değişiklikleri çek
+git init                    # Initialize new repo
+git clone <url>             # Clone a repo
+git status                  # Show status
+git add .                   # Stage all changes
+git commit -m "message"     # Commit changes
+git push                    # Push to remote
+git pull                    # Pull from remote
 ```
 
-## Branch İşlemleri
+## Branch Operations
 
 ```bash
-git branch                  # Branch'leri listele
-git checkout -b <branch>    # Yeni branch oluştur ve geç
-git switch <branch>         # Branch değiştir
-git merge <branch>          # Branch birleştir
-git branch -d <branch>      # Branch sil
+git branch                  # List branches
+git checkout -b <branch>    # Create and switch branch
+git switch <branch>         # Switch branch
+git merge <branch>          # Merge branch
+git branch -d <branch>      # Delete branch
 ```
 
-## Undo İşlemleri
+## Undo Operations
 
 ```bash
-git reset --soft HEAD~1     # Son commit'i geri al (değişiklikleri koru)
-git reset --hard HEAD~1     # Son commit'i geri al (değişiklikleri sil)
-git stash                   # Değişiklikleri sakla
-git stash pop               # Saklanan değişiklikleri geri al
+git reset --soft HEAD~1     # Undo last commit (keep changes)
+git reset --hard HEAD~1     # Undo last commit (discard changes)
+git stash                   # Stash changes
+git stash pop               # Apply stashed changes
 ```
 
-## Log ve Diff
+## Log and Diff
 
 ```bash
-git log --oneline           # Kısa log göster
-git log --graph             # Grafik log
-git diff                    # Değişiklikleri göster
-git diff --staged           # Stage edilmiş değişiklikleri göster
+git log --oneline           # Short log
+git log --graph             # Graph log
+git diff                    # Show changes
+git diff --staged           # Show staged changes
 ```
 
-## İpuçları
+## Tips
 
 ```bash
-git commit -m "fix: hata düzeltme"  # Conventional commit
-git rebase -i HEAD~3                # Son 3 commit'i düzenle
-git cherry-pick <commit>            # Belirli bir commit'i al
+git commit -m "fix: bug fix"  # Conventional commit
+git rebase -i HEAD~3          # Interactively rebase last 3 commits
+git cherry-pick <commit>      # Apply specific commit
 ```

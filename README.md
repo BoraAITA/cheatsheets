@@ -1,35 +1,35 @@
 # 📋 Cheatsheets
 
-Günlük geliştirme işlerinde hızlandıran bilgi kartları.
+Quick reference cards for daily development tasks.
 
-## 📁 İçerik
+## 📁 Content
 
 ### [Git](git.md)
-Temel ve ileri git komutları.
+Basic and advanced git commands.
 
 ### [Linux](linux.md)
-Sık kullanılan Linux komutları.
+Commonly used Linux commands.
 
 ### [Docker](docker.md)
-Docker temel ve sık kullanılan komutlar.
+Docker basic and frequently used commands.
 
 ### [Python](python.md)
-Python ipuçları ve sık kullanılan fonksiyonlar.
+Python tips and commonly used functions.
 
 ### [JavaScript](javascript.md)
-Modern JavaScript (ES6+) ipuçları.
+Modern JavaScript (ES6+) tips.
 
-## 🚀 Hızlı Kullanım
+## 🚀 Quick Start
 
 ```bash
-# Tüm cheat sheet'leri indir
+# Clone all cheat sheets
 git clone https://github.com/BoraAITA/cheatsheets.git
 cd cheatsheets
 
-# Bir dosyayı oku
+# Read a specific file
 cat git.md
 ```
 
-## 🤫 Katkıda Bulun
+## 🤫 Contributing
 
-Kendi bilgi kartlarını eklemek için PR gönder!
+Feel free to submit PRs with your own cheat sheets!

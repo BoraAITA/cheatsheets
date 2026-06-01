@@ -1,52 +1,52 @@
 # 🐳 Docker Cheatsheet
 
-## Temel Komutlar
+## Basic Commands
 
 ```bash
-docker run <image>          # Container başlat
-docker run -d <image>       # Arka planda başlat
-docker run -p 8080:80 <image>  # Port yönlendirme
-docker run -it <image> bash # Etkileşimli shell
-docker ps                   # Çalışan container'ları göster
-docker ps -a                # Tüm container'ları göster
+docker run <image>          # Run container
+docker run -d <image>       # Run in background
+docker run -p 8080:80 <image>  # Port mapping
+docker run -it <image> bash # Interactive shell
+docker ps                   # Show running containers
+docker ps -a                # Show all containers
 ```
 
-## Yönetim
+## Management
 
 ```bash
-docker stop <container>     # Container'ı durdur
-docker start <container>    # Container'ı başlat
-docker rm <container>       # Container'ı sil
-docker rmi <image>          # Image'ı sil
-docker logs <container>     # Logları göster
-docker exec -it <container> bash  # Container'a gir
+docker stop <container>     # Stop container
+docker start <container>    # Start container
+docker rm <container>       # Remove container
+docker rmi <image>          # Remove image
+docker logs <container>     # Show logs
+docker exec -it <container> bash  # Enter container
 ```
 
-## Image İşlemleri
+## Image Operations
 
 ```bash
-docker images               # Image'ları listele
-docker pull <image>         # Image indir
-docker build -t <name> .    # Image oluştur
-docker tag <image> <tag>    # Image'ı etiketle
-docker push <image>         # Image'ı paylaş
+docker images               # List images
+docker pull <image>         # Pull image
+docker build -t <name> .    # Build image
+docker tag <image> <tag>    # Tag image
+docker push <image>         # Push image
 ```
 
 ## Docker Compose
 
 ```bash
-docker-compose up           # Başlat
-docker-compose up -d        # Arka planda başlat
-docker-compose down         # Durdur ve sil
-docker-compose ps           # Durum göster
-docker-compose logs         # Logları göster
-docker-compose build        # Yeniden oluştur
+docker-compose up           # Start services
+docker-compose up -d        # Start in background
+docker-compose down         # Stop and remove
+docker-compose ps           # Show status
+docker-compose logs         # Show logs
+docker-compose build        # Rebuild services
 ```
 
-## Temizlik
+## Cleanup
 
 ```bash
-docker system prune         # Kullanılmayan her şeyi temizle
-docker system prune -a      # Tüm kullanılmayan image'ları sil
-docker volume prune         # Kullanılmayan volume'ları temizle
+docker system prune         # Remove unused data
+docker system prune -a      # Remove all unused images
+docker volume prune         # Remove unused volumes
 ```
